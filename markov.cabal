@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: dd182766c46162e8dfac28e312573164c0519d224307875e5130353605f8493e
+
+name:           markov
+version:        0.1.0.0
+homepage:       https://github.com/Ivan-Yudin/markov#readme
+bug-reports:    https://github.com/Ivan-Yudin/markov/issues
+author:         Ivan Yudin
+maintainer:     yudinivan@yahoo.de
+copyright:      2020 Ivan Yudin
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/Ivan-Yudin/markov
+
+library
+  exposed-modules:
+      Control.Markov
+  other-modules:
+      Paths_markov
+  hs-source-dirs:
+      lib
+  build-depends:
+      base
+  default-language: Haskell2010

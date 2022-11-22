@@ -1,0 +1,19 @@
+name:                markov
+version:             0.1.0.0
+github:              "Ivan-Yudin/markov"
+license:             BSD3
+author:              "Ivan Yudin"
+maintainer:          "yudinivan@yahoo.de"
+copyright:           "2020 Ivan Yudin"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+dependencies:
+-  base   
+
+library:
+  source-dirs: lib
+  exposed-modules: 
+  - Control.Markov
