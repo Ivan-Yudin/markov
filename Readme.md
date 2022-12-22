@@ -9,21 +9,23 @@ important. Each rule is given by a pair of strings
 ```
 /match/substitute/
 ```
+Each rule is either terminal or non-terminal. 
 
 Operational semantics of the algorithm is provided by 
 
 1. Initial current string `s` is the input string. 
 
-1. If there is no rule for which `match` is a substring of `s`, then terminate.
+1. If there is no rule for which `match` is a substring of `s`, then output `s`
+   and terminate.
 
-1. Otherwise, find the first rule for which `match` is a substring of the current string
+1. Otherwise, find the first rule `/match/substitute/` for which `match` is a substring of the current string
    `s`. 
 
-1. Replace the first occurrence of `match` in `s` with `substitute` string. 
+1. Replace the first occurrence of `match` in `s` with `substitute`. 
 
-1. If the rule is terminal, then terminate. 
+1. If the rule is terminal, then output resulting string and terminate. 
 
-1. Otherwise, resume from the beginning with the new current string. 
+1. Otherwise, resume from the beginning with the resulting string as a current string. 
 
 This package provides a framework to construct Markov Normal Algorithms in
 Haskell. 
